@@ -10,9 +10,10 @@ c.fillRect(0,0,canvas.width, canvas.height);
 
 class Sprite 
 {
-    constructor(position)
+    constructor({ position, velocity })
     {
         this.position = position
+        this.velocity = velocity
     }
 
     // Create a default player and fill the rect to red color
@@ -23,13 +24,25 @@ class Sprite
 
     }
 
+    //Create a update
+    update()
+    {
+        
+    }
+
 }
 
 // Create main player use Sprite
 const player = new Sprite
 ({
+   position: {
     x: 0,
     y: 0
+   },
+   velocity: {
+    x:0,
+    y:0
+   }
 });
 
 player.draw()
@@ -37,8 +50,23 @@ player.draw()
 // Create Enemy
 const enemy = new Sprite
 ({
-    x: 400,
-    y: 100
+    position: {
+        x: 400,
+        y: 100
+    },
+    velocity: {
+        x:0,
+        y:0
+    }
 })
 
 enemy.draw()
+
+// Create a infinite loop 
+function animate()
+{
+    window.requestAnimationFrame(animate)
+}
+
+animate()
+
