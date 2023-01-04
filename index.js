@@ -31,6 +31,8 @@ class Sprite
     update()
     {
         this.draw()
+
+        this.position.x += this.velocity.x
         this.position.y += this.velocity.y
 
         if(this.position.y + this.height + this.velocity.y >= canvas.height)
@@ -86,3 +88,14 @@ function animate()
 
 animate()
 
+// To press any key on keyboard
+window.addEventListener('keydown', (event) => {
+    switch(event.key)
+    {
+        // Press 'd' on keyboard move object to right
+        case 'd':
+            player.velocity.x = 1
+            break
+    }
+    console.log(event.key)
+})
