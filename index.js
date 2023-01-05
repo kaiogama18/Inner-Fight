@@ -76,14 +76,11 @@ const enemy = new Sprite
 
 enemy.draw()
 
-const keys = 
-{
-    a: 
-    {
+const keys = {
+    a: {
         pressed: false
     },
-    d: 
-    {
+    d: {
         pressed: false
     }
 }
@@ -100,7 +97,7 @@ function animate()
     if(key.a.pressed) 
     {
         player.velocity.x = -1
-    } else
+    } else if (key.d.pressed) 
     {
         player.velocity.x = 1
     }
@@ -114,10 +111,10 @@ window.addEventListener('keydown', (event) => {
     {
         // Press 'd' on keyboard move object to right
         case 'd':
-            keys.d.velocity.x = true
+            keys.d.pressed = true
             break
         case 'a':
-            keys.a.velocity.x = true
+            keys.a.pressed = true
         break
     }
     console.log(event.key)
@@ -129,10 +126,10 @@ window.addEventListener('keyup', (event) => {
     {
         // Press 'd' on keyboard move object to right
         case 'd':
-            keys.d.velocity.x = false
+            keys.d.velocity = false
             break
         case 'a':
-            keys.a.velocity.x = false
+            keys.a.velocity = false
         break
     }
     console.log(event.key)
