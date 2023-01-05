@@ -59,7 +59,7 @@ const player = new Sprite
    }
 });
 
-player.draw()
+//player.draw()
 
 // Create Enemy
 const enemy = new Sprite
@@ -82,7 +82,7 @@ const keys =
     d: { pressed: false }
 }
 
-enemy.draw()
+//enemy.draw()
 
 
 
@@ -94,6 +94,8 @@ function animate()
     c.fillRect(0,0,canvas.width, canvas.height)
     player.update()
     enemy.update()
+
+    player.velocity.x = 0
 
     if(keys.a.pressed) 
     {
@@ -118,7 +120,7 @@ window.addEventListener('keydown', (event) => {
             keys.a.pressed = true
         break
     }
-    console.log(event.key)
+    //console.log(event.key)
 })
 // Release the Key
 window.addEventListener('keyup', (event) => {
@@ -132,5 +134,5 @@ window.addEventListener('keyup', (event) => {
             keys.a.pressed = false
         break
     }
-    console.log(event.key)
+    //console.log(event.key)
 })
