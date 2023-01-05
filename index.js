@@ -74,16 +74,17 @@ const enemy = new Sprite
     }
 })
 
+//console.log(player)
+
+const keys = 
+{
+    a: { pressed: false },
+    d: { pressed: false }
+}
+
 enemy.draw()
 
-const keys = {
-    a: {
-        pressed: false
-    },
-    d: {
-        pressed: false
-    }
-}
+
 
 // Create a infinite loop 
 function animate()
@@ -94,10 +95,10 @@ function animate()
     player.update()
     enemy.update()
 
-    if(key.a.pressed) 
+    if(keys.a.pressed) 
     {
         player.velocity.x = -1
-    } else if (key.d.pressed) 
+    } else if (keys.d.pressed) 
     {
         player.velocity.x = 1
     }
@@ -119,17 +120,16 @@ window.addEventListener('keydown', (event) => {
     }
     console.log(event.key)
 })
-
 // Release the Key
 window.addEventListener('keyup', (event) => {
     switch(event.key)
     {
         // Press 'd' on keyboard move object to right
         case 'd':
-            keys.d.velocity = false
+            keys.d.pressed = false
             break
         case 'a':
-            keys.a.velocity = false
+            keys.a.pressed = false
         break
     }
     console.log(event.key)
