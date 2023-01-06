@@ -59,7 +59,7 @@ const player = new Sprite
    }
 });
 
-//player.draw()
+player.draw() //Comentar
 
 // Create Enemy
 const enemy = new Sprite
@@ -74,7 +74,7 @@ const enemy = new Sprite
     }
 })
 
-//console.log(player)
+console.log(player) //Comentar
 
 const keys = 
 {
@@ -82,9 +82,7 @@ const keys =
     d: { pressed: false }
 }
 
-//enemy.draw()
-
-
+enemy.draw() //Comentar
 
 // Create a infinite loop 
 function animate()
