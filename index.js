@@ -74,6 +74,8 @@ const enemy = new Sprite
     }
 })
 
+let lastKey
+
 //console.log(player) //Comentar
 
 const keys = 
@@ -93,12 +95,14 @@ function animate()
     player.update()
     enemy.update()
 
+    // Defualt velocity
     player.velocity.x = 0
 
-    if(keys.a.pressed) 
+    // Hold the key
+    if(keys.a.pressed && lastKey == 'a') 
     {
         player.velocity.x = -1
-    } else if (keys.d.pressed) 
+    } else if (keys.d.pressed && lastKey =='d') 
     {
         player.velocity.x = 1
     }
@@ -113,13 +117,16 @@ window.addEventListener('keydown', (event) => {
         // Press 'd' on keyboard move object to right
         case 'd':
             keys.d.pressed = true
+            lastKey = 'd'
             break
         case 'a':
             keys.a.pressed = true
+            lastKey = 'a'
         break
     }
     //console.log(event.key)
 })
+
 // Release the Key
 window.addEventListener('keyup', (event) => {
     switch(event.key)
