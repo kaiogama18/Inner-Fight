@@ -76,7 +76,7 @@ const enemy = new Sprite
 
 let lastKey
 
-//console.log(player) //Comentar
+console.log(player) //Comentar
 
 const keys = 
 {
@@ -128,7 +128,7 @@ window.addEventListener('keydown', (event) => {
             player.velocity.y = -10
             break
     }
-    //console.log(event.key)
+    console.log(event.key)
 })
 
 // Release the Key
@@ -147,5 +147,5 @@ window.addEventListener('keyup', (event) => {
             break
         
     }
-    //console.log(event.key)
+    console.log(event.key)
 })
