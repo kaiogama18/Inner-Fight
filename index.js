@@ -169,13 +169,13 @@ window.addEventListener('keyup', (event) => {
     {
         // Press 'd' on keyboard move object to right
         case 'ArrowRight':
-            keys.d.pressed = false
+            keys.ArrowRight.pressed = false
             break
         case 'ArrowLeft':
-            keys.a.pressed = false
+            keys.ArrowLeft.pressed = false
         break
         case 'ArrowUp':
-            keys.w.pressed = false
+            keys.ArrowUp.pressed = false
             break
     }
 
