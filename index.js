@@ -171,7 +171,7 @@ window.addEventListener('keyup', (event) => {
         case 'ArrowRight':
             keys.d.pressed = false
             break
-        case 'a':
+        case 'ArrowLeft':
             keys.a.pressed = false
         break
         case 'w':
