@@ -17,6 +17,7 @@ class Sprite
         this.position = position
         this.velocity = velocity
         this.height = 150
+        this.lastKey
     }
 
     // Create a default player and fill the rect to red color
@@ -76,7 +77,7 @@ const enemy = new Sprite
 
 let lastKey
 
-console.log(player) //Comentar
+//console.log(player) //Comentar
 
 const keys = 
 {
@@ -113,6 +114,7 @@ animate()
 
 // To press any key on keyboard
 window.addEventListener('keydown', (event) => {
+    console.log(event.key)
     switch(event.key)
     {
         // Press 'd' on keyboard move object to right
@@ -127,8 +129,22 @@ window.addEventListener('keydown', (event) => {
         case 'w':
             player.velocity.y = -10
             break
+
+
+        // Player 2 Controler
+        case 'ArrowRight':
+            keys.ArrowRight.pressed = true
+            enemy.lastKey = 'ArrowRight' 
+            break
+        case 'ArrowLeft':
+            keys.ArrowLeft.pressed = true
+            enemy.lastKey = 'ArrowLeft'
+        break
+        case 'ArrowUp':
+            player.velocity.y = -10
+            break
     }
-    console.log(event.key)
+    //console.log(event.key)
 })
 
 // Release the Key
@@ -145,7 +161,22 @@ window.addEventListener('keyup', (event) => {
         case 'w':
             keys.w.pressed = false
             break
-        
     }
-    console.log(event.key)
+    //console.log(event.key)
+
+    //Enemy keys
+    switch(event.key)
+    {
+        // Press 'd' on keyboard move object to right
+        case 'd':
+            keys.d.pressed = false
+            break
+        case 'a':
+            keys.a.pressed = false
+        break
+        case 'w':
+            keys.w.pressed = false
+            break
+    }
+
 })
