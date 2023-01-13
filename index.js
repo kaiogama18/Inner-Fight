@@ -168,7 +168,7 @@ window.addEventListener('keyup', (event) => {
     switch(event.key)
     {
         // Press 'd' on keyboard move object to right
-        case 'd':
+        case 'ArrowRight':
             keys.d.pressed = false
             break
         case 'a':
