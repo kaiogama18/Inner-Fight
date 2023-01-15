@@ -100,7 +100,7 @@ function animate()
     // Defualt velocity
     player.velocity.x = 0
 
-    // Hold the key
+    // Player Movement -> Hold the key
     if(keys.a.pressed && lastKey == 'a') 
     {
         player.velocity.x = -1
@@ -108,6 +108,8 @@ function animate()
     {
         player.velocity.x = 1
     }
+
+    
 }
 
 animate()
