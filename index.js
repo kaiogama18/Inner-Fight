@@ -109,7 +109,15 @@ function animate()
         player.velocity.x = 1
     }
 
-    
+    // Enemy Movement -> Hold the key
+    if(keys.ArrowLeft.pressed && enemy.lastKey == 'ArrowLeft') 
+    {
+        enemy.velocity.x = -1
+    } else if (keys.ArrowRight.pressed && enemy.lastKey =='ArrowRight') 
+    {
+        enemy.velocity.x = 1
+    }
+
 }
 
 animate()
