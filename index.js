@@ -77,6 +77,11 @@ const enemy = new Sprite
 
 
 console.log(player) //Comentar
+console.log(player) //Comentar
+console.log(player) //Comentar
+console.log(player) //Comentar
+console.log(player) //Comentar
+console.log(player) //Comentar
 
 const keys = 
 {
