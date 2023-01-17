@@ -180,6 +180,9 @@ window.addEventListener('keyup', (event) => {
             break
     }
     console.log(event.key)
+    console.log(event.key)
+    console.log(event.key)
+    console.log(event.key)
 
     //Enemy keys
     switch(event.key)
