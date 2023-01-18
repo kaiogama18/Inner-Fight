@@ -77,11 +77,7 @@ const enemy = new Sprite
 
 
 console.log(player) //Comentar
-console.log(player) //Comentar
-console.log(player) //Comentar
-console.log(player) //Comentar
-console.log(player) //Comentar
-console.log(player) //Comentar
+
 
 const keys = 
 {
@@ -179,7 +175,7 @@ window.addEventListener('keyup', (event) => {
             keys.w.pressed = false
             break
     }
-    console.log(event.key)
+    //console.log(event.key)
    
 
     //Enemy keys
