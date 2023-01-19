@@ -18,6 +18,12 @@ class Sprite
         this.velocity = velocity
         this.height = 150
         this.lastKey
+        this.attackBox = 
+        {
+            position: this.position,
+            width: 100,
+            height: 50,
+        }
     }
 
     // Create a default player and fill the rect to red color
