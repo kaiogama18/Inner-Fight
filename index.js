@@ -31,7 +31,10 @@ class Sprite
     {
         c.fillStyle = 'red'
         c.fillRect(this.position.x, this.position.y, 50, this.height)
+        
+        // attack box 
 
+        c.fillRect(this.attackBox.position.x, this.attackBox.position.y, this.attackBox.width, this.attackBox.height)
     }
 
     //Create a update
