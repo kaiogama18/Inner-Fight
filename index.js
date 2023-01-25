@@ -12,7 +12,7 @@ const gravity = 0.7
 
 class Sprite 
 {
-    constructor({ position, velocity })
+    constructor({ position, velocity, color = 'red' })
     {
         this.position = position
         this.velocity = velocity
@@ -24,6 +24,7 @@ class Sprite
             width: 100,
             height: 50,
         }
+        this.color = color
     }
 
     // Create a default player and fill the rect to red color
