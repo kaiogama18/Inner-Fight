@@ -25,7 +25,8 @@ class Sprite
             width: 100,
             height: 50,
         }
-        this.color = color
+        this.color = color,
+        this.isAttacking
     }
 
     // Create a default player and fill the rect to red color
@@ -56,6 +57,14 @@ class Sprite
         }
     }
 
+    attack()
+    {
+        this.isAttacking = true
+        setTimeout(() =>
+        {
+            this.isAttacking = false
+        }, 100)
+    }
 }
 
 // Create main player use Sprite
@@ -137,7 +146,9 @@ function animate()
     if (player.attackBox.position.x + player.attackBox.width >= enemy.position.x &&
         player.attackBox.position.x <= enemy.position.x + enemy.width &&
         player.attackBox.position.y + player.attackBox.height >= enemy.position.y &&
-        player.attackBox.position.y <= enemy.position.y + enemy.height)
+        player.attackBox.position.y <= enemy.position.y + enemy.height &&
+        player.isAttacking
+        )
     {
         console.log("go")
     }
@@ -164,6 +175,10 @@ window.addEventListener('keydown', (event) => {
         case 'w':
             player.velocity.y = -20
             break
+        case ' ':
+            player.isAttacking
+            break;
+        
 
 
         // Player 2 Controler
