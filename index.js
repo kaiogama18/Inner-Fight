@@ -29,7 +29,7 @@ class Sprite
     // Create a default player and fill the rect to red color
     draw()
     {
-        c.fillStyle = 'red'
+        c.fillStyle = this.color
         c.fillRect(this.position.x, this.position.y, 50, this.height)
         
         // attack box 
