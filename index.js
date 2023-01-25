@@ -132,6 +132,13 @@ function animate()
         enemy.velocity.x = 5
     }
 
+    // detect for collision
+    if (player.attackBox.position.x + player.attackBox.width >= enemy.position.x )
+    {
+         
+    }
+
+
 }
 
 animate()
