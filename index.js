@@ -150,6 +150,7 @@ function animate()
         player.isAttacking
         )
     {
+        player.isAttacking = false
         console.log("go")
     }
 
@@ -179,7 +180,6 @@ window.addEventListener('keydown', (event) => {
             player.attack()
             break;
         
-
 
         // Player 2 Controler
         case 'ArrowRight':
