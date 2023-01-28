@@ -41,8 +41,8 @@ class Sprite
         c.fillRect(this.position.x, this.position.y, this.width, this.height)
         
         // attack box 
-        //if (this.isAttacking)
-       // {
+        if (this.isAttacking)
+        {
             c.fillStyle = 'green'
             c.fillRect(
                 this.attackBox.position.x, 
@@ -50,7 +50,7 @@ class Sprite
                 this.attackBox.width, 
                 this.attackBox.height
                 )
-       // }
+        }
     }
 
     //Create a update
@@ -199,7 +199,7 @@ animate()
 
 // To press any key on keyboard
 window.addEventListener('keydown', (event) => {
-    console.log(event.key)
+    //console.log(event.key)
     switch(event.key)
     {
         // Press 'd' on keyboard move object to right
@@ -232,7 +232,7 @@ window.addEventListener('keydown', (event) => {
             enemy.velocity.y = -20
             break
     }
-    console.log(event.key)
+    //console.log(event.key)
 })
 
 // Release the Key
