@@ -183,7 +183,13 @@ function animate()
     if (rectangularCollision({rectangle1:player, rectangle2:enemy}) && player.isAttacking)
     {
         player.isAttacking = false
-        console.log("go")
+        console.log("player go")
+    }
+
+    if (rectangularCollision({rectangle1:enemy, rectangle2:player}) && enemy.isAttacking)
+    {
+        enemy.isAttacking = false
+        console.log("enemy go")
     }
 
 
