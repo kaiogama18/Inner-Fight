@@ -129,7 +129,8 @@ const keys =
     d:  { pressed: false },
     w:  { pressed: false },
     ArrowRight: { pressed: false },
-    ArrowLeft:  { pressed: false }
+    ArrowLeft:  { pressed: false },
+    ArrowUp:    { pressed: false }
 }
 
 //enemy.draw() //Comentar
@@ -230,7 +231,7 @@ window.addEventListener('keydown', (event) => {
         break
         case 'ArrowUp':
             enemy.velocity.y = -20
-            break
+        break
     }
     //console.log(event.key)
 })
@@ -267,8 +268,9 @@ window.addEventListener('keyup', (event) => {
             keys.ArrowUp.pressed = false
             break
         case 'ArrowDown':
-            enemy.isAttacking = true
-        break
+            enemy.attack()
+            break;
+            
     }
 
 })
